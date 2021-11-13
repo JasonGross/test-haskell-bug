@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -cpp -XMagicHash #-}
+{-# OPTIONS_GHC -cpp -XMagicHash -XNoPolyKinds #-}
 {- For Hugs, use the option -F"cpp -P -traditional" -}
 
 module Main where
