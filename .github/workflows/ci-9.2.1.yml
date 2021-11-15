@@ -15,4 +15,4 @@ jobs:
       with:
         ghc-version: 9.2.1
         cabal-version: latest
-    - run: ghc word_by_word_montgomery.hs -o word_by_word_montgomery
+    - run: command time -f "(real: %e, user: %U, sys: %S, mem: %M ko)" ghc word_by_word_montgomery.hs -o word_by_word_montgomery
