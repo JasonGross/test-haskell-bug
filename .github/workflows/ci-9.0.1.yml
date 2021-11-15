@@ -16,4 +16,5 @@ jobs:
         ghc-version: 9.0.1
         cabal-version: latest
     - run: |
+        export GHCFLAGS='+RTS -M5G -RTS'
         command time -f '(real: %e, user: %U, sys: %S, mem: %M ko)' ghc word_by_word_montgomery.hs -o word_by_word_montgomery
