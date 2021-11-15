@@ -1,0 +1,18 @@
+name: CI (9.0.1)
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build_9_0_1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: haskell/actions/setup@v1
+      with:
+        ghc-version: 9.0.1
+        cabal-version: latest
+    - run: ghc word_by_word_montgomery.hs -o word_by_word_montgomery
